@@ -1,0 +1,20 @@
+wget -qO - https://gist.githubusercontent.com/dimaskiddo/da6dfe184ce54db7293f128cf8eb7039/raw/61e1b02a4877d637edc8518d6e201e7424f1e1d9/jitsi-jibri-setup.sh | bash -e -
+mv /etc/jitsi/jibri/config.json /etc/jitsi/jibri/config.json.orig~
+nano /etc/jitsi/jibri/config.json
+
+systemctl restart jibri
+systemctl status jibri
+
+tail -n 100 -f /var/log/jitsi/jibri/log.0.txt
+nano /etc/prosody/conf.d/assembly.myfacefeed.net.cfg.lua
+
+systemctl restart prosody
+systemctl status prosody
+
+prosodyctl register jibri auth.assembly.myfacefeed.net c0rvetteracer
+prosodyctl register recorder recorder.assembly.myfacefeed.net c0rvetteracer
+
+nano /etc/jitsi/jicofo/sip-communicator.properties
+
+systemctl restart jicofo
+systemctl status jicofo

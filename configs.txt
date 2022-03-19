@@ -1,0 +1,37 @@
+fileRecordingsEnabled: true,
+liveStreamingEnabled: true,
+hiddenDomain: 'recorder.assembly.myfacefeed.net',
+
+
+{
+    "recording_directory":"/srv/recordings",
+    "finalize_recording_script_path": "/bin/true",
+    "xmpp_environments": [{
+          "name": "assembly.myfacefeed.net",
+          "xmpp_server_hosts": [
+            "assembly.myfacefeed.net"
+          ],
+          "xmpp_domain": "assembly.myfacefeed.net",
+          "control_login": {
+            "domain": "auth.assembly.myfacefeed.net",
+            "username": "jibri",
+            "password": "c0rvetteracer"
+          },
+          "control_muc": {
+            "domain": "internal.auth.assembly.myfacefeed.net",
+            "room_name": "JibriBrewery",
+            "nickname": "jibri-nickname"
+          },
+          "call_login": {
+            "domain": "recorder.assembly.myfacefeed.net",
+            "username": "recorder",
+            "password": "c0rvetteracer"
+          },
+          "room_jid_domain_string_to_strip_from_start": "conference.",
+          "usage_timeout": "0"
+      }]
+}
+
+
+org.jitsi.jicofo.jibri.BREWERY=JibriBrewery@internal.auth.assembly.myfacefeed.net
+org.jitsi.jicofo.jibri.PENDING_TIMEOUT=90
