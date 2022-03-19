@@ -15,7 +15,7 @@ hiddenDomain: 'recorder.assembly.myfacefeed.net',
           "control_login": {
             "domain": "auth.assembly.myfacefeed.net",
             "username": "jibri",
-            "password": "c0rvetteracer"
+            "password": ""
           },
           "control_muc": {
             "domain": "internal.auth.assembly.myfacefeed.net",
@@ -25,7 +25,7 @@ hiddenDomain: 'recorder.assembly.myfacefeed.net',
           "call_login": {
             "domain": "recorder.assembly.myfacefeed.net",
             "username": "recorder",
-            "password": "c0rvetteracer"
+            "password": ""
           },
           "room_jid_domain_string_to_strip_from_start": "conference.",
           "usage_timeout": "0"
